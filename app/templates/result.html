@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Score Predictor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+    <script src="https://kit.fontawesome.com/f13b0bc903.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('{{ url_for('static', filename='ipl1.jpeg') }}') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: black;
+            
+        }
+        .register {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        p {
+            margin: 0;
+            padding: 10px 0;
+            font-size: 20px;
+
+        }
+        .carousel {
+            max-width: 100%;
+            height: 250px;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+        .carousel img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            max-height: 250px;
+            display: block;
+            margin: 0 auto;
+            animation: slide 40s infinite;
+        }
+        @keyframes slide {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            20% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        .carousel img:nth-child(2) {
+            animation-delay: 5s;
+        }
+        .carousel img:nth-child(3) {
+            animation-delay: 10s;
+        }
+        .carousel img:nth-child(4) {
+            animation-delay: 15s;
+        }
+        .carousel img:nth-child(5) {
+            animation-delay: 20s;
+        }
+        .carousel img:nth-child(6) {
+            animation-delay: 25s;
+        }
+        .carousel img:nth-child(7) {
+            animation-delay: 30s;
+        }
+        .carousel img:nth-child(8) {
+            animation-delay: 35s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>IPL Batting Score Predictor 🏆</h1>
+
+    <!-- Result -->
+    <div class="register">
+        <p style="font-size:30px;">The final predicted score (range):<br> {{ lower_limit }} to {{ upper_limit }}</p>
+    </div>
+
+    <p style="font-size:20px;">Made by Adrish Das And Anup Mande</p>
+
+    <!-- Carousel -->
+    <div class="carousel">
+        <img src="{{ url_for('static', filename= 'mi1.jpg') }}">
+        <img src="{{ url_for('static', filename= 'srh1.png') }}">
+        <img src="{{ url_for('static', filename= 'rcb1.png') }}">
+        <img src="{{ url_for('static', filename= 'dc1.png') }}">
+        <img src="{{ url_for('static', filename= 'rr1.png') }}">
+        <img src="{{ url_for('static', filename= 'kkr1.jpg') }}">
+        <img src="{{ url_for('static', filename= 'kxip1.png') }}">
+        <img src="{{ url_for('static', filename= 'csk1.png') }}">
+    </div>
+</body>
+</html>
